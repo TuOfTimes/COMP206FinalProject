@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <title>Blue Room</title>
+  <meta charset="utf-8">
+  <style>
+    .right{
+      float: right;
+      margin-right: 40%;
+    }
+    .left{
+      float: left;
+      margin-left: 40%;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 style="font-family: verdana; font-size: 200%; text-align: center;" >
+    Welcome to the Blue Room
+  </h1>
+
+  <p>
+    <img title="Room" src="room.jpg" height="40%" width="40%" style="float: left;margin-left: 40px; margin-right: 40px">
+
+    <textarea readonly cols="80" rows="18">Hi there! Welcome to the Blue Room! Type a command to get started.
+
+Commands:
+  DROP n - drop n gold and get n/2 manna
+  PLAY - play game
+  EXIT - leave game
+  REFRESH - refresh page</textarea>
+
+    <form action="room.cgi" method="post">
+      <input type="text" name="command" style="width: 523px; align: center">
+      <input type="hidden" name="inventory" value="10,10">
+      <input type="submit" value="Submit">
+    </form>
+  </p>
+
+  </br>
+  </br>
+  </br>
+  <center> <form action="http://cs.mcgill.ca/~sbeard3/cgi-bin/transporter.py" method="post"> <!--When this button is clicked, occupied = 0; inventory needs to be updated-->
+    <input type="hidden" name="inventory" value="10,10">
+    <input type="hidden" name="URL" value="http://cgi.cs.mcgill.ca/~htu6/Room">
+    <input type="submit" value="North">
+  </form></center>
+  <span class="left"><form action="http://cs.mcgill.ca/~sbeard3/cgi-bin/transporter.py" method="post">
+    <input type="hidden" name="inventory" value="10,10">
+    <input type="hidden" name="url" value="http://cgi.cs.mcgill.ca/~htu6/Room">
+    <input type="submit" value="West">
+  </form></span>
+  <span class="right"><form action="http://cs.mcgill.ca/~sbeard3/cgi-bin/transporter.py" method="post">
+    <input type="hidden" name="inventory" value="10,10">
+    <input type="hidden" name="URL" value="http://cgi.cs.mcgill.ca/~htu6/Room">
+    <input type="submit" value="East">
+  </form></span>
+  </br>
+  <center><form action="http://cs.mcgill.ca/~sbeard3/cgi-bin/transporter.py" method="post">
+    <input type="hidden" name="inventory" value="10,10">
+    <input type="hidden" name="URL" value="http://cgi.cs.mcgill.ca/~htu6/Room">
+    <input type="submit" value="South">
+  </form></center>
+
+
+
+</body>
+
+</html>
+
